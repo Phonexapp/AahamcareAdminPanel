@@ -1,0 +1,32 @@
+const headCells = [
+  {
+    id: 'item',
+    numeric: false,
+    disablePadding: true,
+    label: 'Item Name',
+  },
+  {
+    id: 'requirement',
+    numeric: true,
+    disablePadding: false,
+    label: 'Requirement',
+  },
+  {
+    id: 'requirementUnit',
+    numeric: false,
+    disablePadding: false,
+    label: 'Requirement Unit',
+  },
+  {
+    id: 'price',
+    numeric: true,
+    disablePadding: false,
+    label: 'Total Price',
+  },
+  {
+    id: 'needs',
+    numeric: true,
+    disablePadding: false,
+    label: 'Balance Requirement',
+  },
+];

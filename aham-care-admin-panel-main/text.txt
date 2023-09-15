@@ -1,0 +1,21 @@
+ <FormControl>
+          <RadioGroup
+            defaultValue={product.status}
+            row
+            aria-labelledby="demo-row-radio-buttons-group-label"
+            name="row-radio-buttons-group"
+          >
+            {status.map((item, i) => (
+              <FormControlLabel
+                key={i}
+                value={item}
+                control={<Radio />}
+                label={item}
+                onChange={(e) => {
+                  setStatusValue(e.target.value);
+                }}
+              />
+            ))}
+          </RadioGroup>
+        </FormControl>
+      </DialogContent>

@@ -1,0 +1,71 @@
+<Grid item md={6} sm={12}>
+                <Stack direction="row" divider={<Divider orientation="vertical" flexItem />} spacing={2}>
+                  <Button variant="contained" component="label">
+                    Upload Cover Photo
+                    <TextField
+                      type="file"
+                      hidden
+                      style={{ display: 'none' }}
+                      onBlur={handleBlur}
+                      onChange={handleChange}
+                      value={values.photo}
+                      name="photo"
+                      error={!!touched.photo && !!errors.photo}
+                      helperText={touched.photo && errors.photo}
+                    />
+                  </Button>
+                  {/* <Button variant="contained" component="label">
+                    Upload Documents
+                    <TextField
+                      type="file"
+                      hidden
+                      style={{ display: 'none' }}
+                      onBlur={handleBlur}
+                      onChange={handleChange}
+                      value={values.pdf}
+                      name="pdf"
+                      error={!!touched.pdf && !!errors.pdf}
+                      helperText={touched.pdf && errors.pdf}
+                    />
+                  </Button> */}
+
+                  <label htmlFor="file-input">
+                    <Input
+                      id="file-input"
+                      type="file"
+                      disableUnderline
+                      onChange={handleChange}
+                      style={{ display: 'none' }}
+                    />
+                    <Button variant="contained" component="span">
+                      Documents
+                    </Button>
+                  </label>
+
+                  <Button variant="contained" component="label">
+                    Upload Requiremnt
+                    <input type="file" hidden />
+                  </Button>
+                </Stack>
+              </Grid>
+
+
+
+
+              <TextField
+              type="file"
+              label="Discription"
+              onBlur={handleBlur}
+              onChange={(event) => setFieldValue('photo', event.target.files[0])}
+              name="photo"
+              error={!!touched.photo && !!errors.photo}
+              helperText={touched.photo && errors.photo}
+            />
+
+            
+            <FormControl variant="standard">
+            <InputLabel shrink htmlFor="bootstrap-input">
+              Bootstrap
+            </InputLabel>
+            <TextField/>
+          </FormControl>
